@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+    color: #ffffff;
+    margin: 0;
+    font-family: "Sansation", sans-serif;
+}
+
+p {
+    color: #B6B6B4;
+}
+
+h2 {
+    color: #A31D1D;
+}
+
+.heading  {
+    font-size: 3.8em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #A31D1D;
+    text-transform: uppercase;
+    // text-shadow: #333333 1px 0 3px;
+}
+
+.sub-heading {
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    color: #A31D1D;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media screen and (max-width: 1440px) {
+        width: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: auto;
+    }
+
+    @media screen and (max-width: 425px) {
+        width: auto;
+    }
+}
+
+.rounded-edge {
+
+    /* update the 85% to control the curvature
+       you can also update the 50% to control the position
+    */
+    // height: 315px;
+    // aspect-ratio: 3/2;
+    // clip-path: ellipse(100% 100% at 50% 0%);
+    // background: #A31D1D;
+
+    @media screen and (max-width: 425px) {
+        height: 240px;
+        clip-path: ellipse(40% 80% at 50% 0%);
+        background: #A31D1D;
+        aspect-ratio: 3/1;
+    }
+}
+
+.top-section {
+    background: #080808;
+    height: 60vh;
+    min-height: 300px;
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+
+    @media screen and (max-width: 768px) {
+        height: 50vh;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 425px) {
+            flex-direction: column;
+        }
+
+        .text-heading {
+            width: 50%;
+            
+            @media screen and (max-width: 1024px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 425px) {
+                width: auto;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 3.8em;
+                letter-spacing: 2px;
+                font-weight: 200;
+                margin: 10px 0;
+                color: #B6B6B4;
+
+                span {
+                    color: #A31D1D;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+
+                @media screen and (max-width: 425px) {
+                    font-size: 3.2em;
+                    color: white;
+                    margin: 25px 0;
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+
+            em {
+                font-style: normal;
+                font-size: 3.2em;
+                font-weight: 200;
+                color: #A31D1D;
+                padding-bottom: 4px;
+                border-bottom: 2px solid #B6B6B4;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 2.8em;
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 2.4em;
+                }
+
+                @media screen and (max-width: 425px) {
+                    font-size: 2.0em;
+                    color: white;
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            p  {
+                @media screen and (max-width: 425px) {
+                    display: none;
+                }
+            }
+        }
+
+        .display-img {
+            width: 50%;
+            text-align: center;
+
+            @media screen and (max-width: 1024px) {
+                width: 40%;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 425px) {
+                width: auto;
+            }
+
+            img {
+                height: 800px;
+
+                @media screen and (max-width: 1440px) {
+                    margin-top: 115px
+                }
+
+                @media screen and (max-width: 768px) {
+                    margin-top: 0;
+                    height: 750px;
+                }
+
+                @media screen and (max-width: 425px) {
+                    height: 580px;
+                }
+            }
+        }
+    }
+}
+
+.mid-section {
+    padding: 120px 0;
+    border-bottom: 1px solid #333;
+
+    .about-section  {
+        display: flex;
+        column-gap: 30px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+    }
+
+    .about-section--item  {
+        flex: 1;
+
+        .heading {
+            margin: 20px 0 40px 0;
+
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
+
+        .content {
+            background: #080808;
+            border: 0.5px solid #353839;
+            border-radius: 8px;
+            // margin: 0 30px 0 0;
+            padding: 20px 40px;
+            box-shadow: 1px 0px 10px #353839;
+            // height: 400px;   
+
+            @media screen and (max-width: 768px) {
+                // margin: 0 0 40px 0;
+                padding: 20px 25px; 
+            }
+        }
+
+    }
+}
+
+
+.bottom-section {
+    background: #080808;
+    padding: 120px 0;
+}
+
+ul.tech-logos-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    li {
+        flex: 0 1 calc(100% / 6  - 20px);
+        padding: 20px 10px;
+    }
+}
+
+.logo-size {
+    height: 125px;
+}
